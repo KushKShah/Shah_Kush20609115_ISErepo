@@ -5,8 +5,51 @@
 
 Category 1:
     (a): Converting a given string to Upper Case or Lower Case
+	Module: Main
+        Inputs: Nothing
+        Description: This Module Prints out what the code is meant to do and then Runs Module ReadInFileMenu.
+        Export: Nothing
+
+        Module: ReadInFileMenu
+        Inputs: outputFileName(String) is passed through the Main module
+        Description: This Module is used to ask the User if they want to Read in a file or they want to input a string.
+                        If yes the system asks the user to input the file name.
+                        Then CaseMenu is ran through.
+        Export: Nothing
+
+        Module: CaseMenu
+        Inputs: inputStatus(String), inputFileName(String), outputFileName(String) is passed through the ReadInFileMenu module
+        Description: This Module is used to ask the user if they want to change the string to upper case or lower case.
+                        Once the user inputs a valid input the Module runs according to the inputStatus(reading file is yes or no).
+                        If reading file is yes then it runs the ReadFile Module, but if it is no the Module asks the user to input the string they want to change the case of.
+                        Once this is done the Final String is sent to the Upper or Lower Modules depending on User request.
+        Export: Nothing
+
+        Module: ReadFile
+        Inputs: inputFileName(String), outputFileName(String) are passed in through CaseMenu Module
+        Description: This Module is used to read in the file that the user tells the system to read in ReadInFileMenu Module.
+                        The Module saves line by line to the String fileInput then once the reading of the file is complete the Module returns the String fileInput.
+        Exports: fileInput(String)
+
+        Module: WriteToFile
+        Inputs: outputFileName(String), finalString(String) is passed in from Modules Upper or Lower
+        Description: This Module is used to Write out the results to the results file.
+        Exports: Nothing
+
+        Module: Upper
+        Inputs: outputFileName(String), inputString(String) is passed in through the CaseMenu Module
+        Description: This Module is used to turn the String to Upper case and then send the finalString to the WriteToFile Module.
+        Exports: Nothing
+
+        Module: Lower
+        Inputs: outputFileName(String), inputString(String) is passed in through the CaseMenu Module
+        Description: This Module is used to turn the String to Lower case and then send the finalString to the WriteToFile Module.
+        Exports: Nothing
+
     (b): Identify whether numeric values are in a give string
+
     (c): Identify whether a given string is a valid number or not
+
     (d): Remove any numeric values in a give string and then convert the string to Upper Case or Lower Case
 
 Category 2:
