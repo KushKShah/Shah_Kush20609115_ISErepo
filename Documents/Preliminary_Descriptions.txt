@@ -4,7 +4,7 @@
 #
 
 Category 1:
-    (a): Converting a give string to Upper Case or Lower Case
+    (a): Converting a given string to Upper Case or Lower Case
     (b): Identify whether numeric values are in a give string
     (c): identify whether a given string is a valid number or not
     (d): Remove any numeric values in a give string and then convert the string to Upper Case or Lower Case
