@@ -85,6 +85,42 @@ Category 1:
         Exports: finalString(String)
 
     (c): Identify whether a given string is a valid number or not
+	Module: Main
+        Inputs: Nothing
+        Description: This Module Prints out what the code is meant to do and then Runs Module ReadInFileMenu.
+        Export: Nothing
+
+        Module: ReadInFileMenu
+        Inputs: outputFileName(String) is passed through the Main module
+        Description: This Module is used to ask the User if they want to Read in a file or they want to input a value.
+                        If yes the system asks the user to input the file name. Then ReadFile Module is ran through.
+        Export: Nothing
+
+        Module: NoMenu
+        Inputs: outputFileName(String) is passed in through the ReadInFileMenu Module
+        Description: This Module is used to Ask the User to input a value to identify if it is a valid Number.
+                        Used only if User says no in the ReadInFileMenu Module.
+                        Once the User inputs a value the CheckForValidNumber Module is ran.
+                        The finalValue is sent to be written to the output file through WriteToFile Module.
+        Exports: Nothing
+
+        Module: ReadFile
+        Inputs: inputFileName(String), outputFileName(String) are passed in through ReadInFileMenu Module
+        Description: This Module is used to read in the file that the user tells the system to read in ReadInFileMenu Module.
+                        The Module runs CheckForValidNumber Module For each line and stores the result as finalValue.
+                        At the End the of the Module the finalValue is sent to be written in to the output file through WriteToFile Module.
+        Exports: Nothing
+
+        Module: WriteToFile
+        Inputs: outputFileName(String), finalValue(String) is passed in from Module ReadFile or NoMenu Module
+        Description: This Module is used to Write out the results to the results file.
+        Exports: Nothing
+
+        Module: CheckForValidNumber
+        Inputs: inputString(String) is passed in from Modules ReadFile or NoMenu
+        Description: This Module is used to Check if the given Value is a Valid Number and Prints out if it is or is not.
+                        This module also saves the outcome to the finalValue variable which is exported.
+        Exports: finalValue(String)
 
     (d): Remove any numeric values in a give string and then convert the string to Upper Case or Lower Case
 
