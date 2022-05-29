@@ -47,6 +47,42 @@ Category 1:
         Exports: Nothing
 
     (b): Identify whether numeric values are in a give string
+	Module: Main
+        Inputs: Nothing
+        Description: This Module Prints out what the code is meant to do and then Runs Module ReadInFileMenu.
+        Export: Nothing
+
+        Module: ReadInFileMenu
+        Inputs: outputFileName(String) is passed through the Main module
+        Description: This Module is used to ask the User if they want to Read in a file or they want to input a string.
+                        If yes the system asks the user to input the file name. Then ReadFile Module is ran through.
+        Export: Nothing
+
+        Module: NoMenu
+        Inputs: outputFileName(String) is passed in through the ReadInFileMenu Module
+        Description: This Module is used to Ask the User to input a string to identify if it has a number in it or not.
+                        Used only if User says no in the ReadInFileMenu Module.
+                        Once the User inputs a String the CheckForNum Module is ran.
+                        The finalString is sent to be written to the output file through WriteToFile Module.
+        Exports: Nothing
+
+        Module: ReadFile
+        Inputs: inputFileName(String), outputFileName(String) are passed in through ReadInFileMenu Module
+        Description: This Module is used to read in the file that the user tells the system to read in ReadInFileMenu Module.
+                        The Module runs CheckForNum Module For each line and stores the result as finalString.
+                        At the End the of the Module the finalString is sent to be written in to the output file through WriteToFile Module.
+        Exports: Nothing
+
+        Module: WriteToFile
+        Inputs: outputFileName(String), finalString(String) is passed in from Module ReadFile or NoMenu Module
+        Description: This Module is used to Write out the results to the results file.
+        Exports: Nothing
+
+        Module: CheckForNum
+        Inputs: inputString(String) is passed in from Modules ReadFile or NoMenu
+        Description: This Module is used to Check if the given String has a Number in the String and Prints out if it does or does not.
+                        This module also saves the outcome to the finalString variable which is exported.
+        Exports: finalString(String)
 
     (c): Identify whether a given string is a valid number or not
 
