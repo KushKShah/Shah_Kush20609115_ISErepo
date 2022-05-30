@@ -21,7 +21,7 @@ public class Category1a
         boolean running = true;
         String inputFileName = "";
         Scanner sc = new Scanner(System.in);
-        while
+        while(running == true)
         {
             
             System.out.println("Would you like to Read in a file or enter a string?");
