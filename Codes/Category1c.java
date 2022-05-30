@@ -109,4 +109,21 @@ public class Category1c {
         WriteToFile(outputFileName, finalValue);
         return finalValue;
     }
+    public static void WriteToFile(String outputFileName, String finalValue)
+    {
+        FileOutputStream fileStrm = null;
+        PrintWriter pw;
+        try
+        {
+            fileStrm = new FileOutputStream(outputFileName);
+            pw = new PrintWriter(fileStrm);
+            pw.println(finalValue);
+            pw.close();
+        }
+        catch(IOException ioE)
+        {
+            System.out.println("Error in writing to file: " + ioE.getMessage());
+        }
+    }
+}
 }
