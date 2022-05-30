@@ -51,4 +51,16 @@ public class Category1b {
         }
         sc.close();
     }
+    public static void NoMenu(String outputFileName)
+    {
+        Scanner scone = new Scanner(System.in);
+        String inputString = "";
+        System.out.println("Enter the String you would like to use to check if there are any numbers in it");
+        inputString = scone.next();
+        inputString += scone.nextLine();
+        System.out.println();
+        String finalString = CheckForNum(inputString);
+        WriteToFile(outputFileName, finalString);
+        scone.close();
+    }
 }
