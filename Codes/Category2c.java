@@ -187,4 +187,78 @@ public class Category2c
         } while (menu == true);
         scone.close();
     }
+    public static String ReadFile(String inputFileName, String choice)
+    {
+        FileInputStream fileStream = null;
+        InputStreamReader isr;
+        BufferedReader bufRdr;
+        String line;
+        String finalString = "";
+        try
+        {
+            fileStream = new FileInputStream(inputFileName);
+            isr = new InputStreamReader(fileStream);
+            bufRdr = new BufferedReader(isr);
+            line = bufRdr.readLine();
+            while(line != null)
+            {
+                if (choice.equals("1"))
+                {
+                    finalString += ConvertHoursToMinutes(line);
+                    finalString += "\n";
+                    finalString += "\n";
+                }
+                else if (choice.equals("2"))
+                {
+                    finalString += ConvertMinutesToHours(line);
+                    finalString += "\n";
+                    finalString += "\n";
+                }
+                else if (choice.equals("3"))
+                {
+                    finalString += ConvertMinutesToSeconds(line);
+                    finalString += "\n";
+                    finalString += "\n";
+                }
+                else if (choice.equals("4"))
+                {
+                    finalString += ConvertSecondsToMinutes(line);
+                    finalString += "\n";
+                    finalString += "\n";
+                }
+                line = bufRdr.readLine();
+            }
+            fileStream.close();
+        }
+        catch(IOException errorDetails)
+        {
+            if(fileStream != null)
+            {
+                try
+                {
+                fileStream.close();
+                }
+                catch(IOException ex2)
+                { }
+            }
+            System.out.println("Error in fileProcessing: " + errorDetails.getMessage());
+            finalString = "n/a";
+        }
+        return finalString;
+    }
+    public static void WriteToFile(String outputFileName, String finalString)
+    {
+        FileOutputStream fileStrm = null;
+        try
+        {
+            fileStrm = new FileOutputStream(outputFileName);
+            PrintWriter pw = new PrintWriter(fileStrm);
+            pw.println(finalString);
+            pw.close();
+        }
+        catch(IOException ioE)
+        {
+            System.out.println("Error in writing to file: " + ioE.getMessage());
+        }
+    }
 }
