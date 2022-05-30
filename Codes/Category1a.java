@@ -185,11 +185,10 @@ public class Category1a
     public static void WriteToFile(String outputFileName, String finalString)
     {
         FileOutputStream fileStrm = null;
-        PrintWriter = pw;
         try
         {
             fileStrm = new FileOutputStream(outputFileName);
-            pw = new PrintWriter(fileStrm);
+            PrintWriter pw = new PrintWriter(fileStrm);
             pw.println(finalString);
             pw.close();
         }
@@ -223,5 +222,5 @@ public class Category1a
         System.out.println(finalString);
         System.out.println();
         WriteToFile(outputFileName, finalString);
-     }
+    }
 }
