@@ -66,8 +66,7 @@ public class Category1a
         String choice = "x";
         Scanner scone = new Scanner(System.in);
         String finalString = "";
-        String Upper = "";
-        String Lower = "";
+        String UorLCase = "";
         if (inputStatus.equals("yes") == true)
         {
             finalString = ReadFile(inputFileName, outputFileName);
@@ -103,8 +102,8 @@ public class Category1a
                     if (inputStatus.equals("yes") == true)
                     {
                         //make value to upper case
-                        Upper = Upper(finalString);
-                        WriteToFile(outputFileName, Upper);
+                        UorLCase = Upper(finalString);
+                        WriteToFile(outputFileName, UorLCase);
                     }
                     else if (inputStatus.equals("no") == true)
                     {
@@ -112,8 +111,8 @@ public class Category1a
                         finalString = scone.next();
                         finalString += scone.nextLine();
                         System.out.println();
-                        Upper = Upper(finalString);
-                        WriteToFile(outputFileName, Upper);
+                        UorLCase = Upper(finalString);
+                        WriteToFile(outputFileName, UorLCase);
                     }
                     menu = false;
                     break;
@@ -121,8 +120,8 @@ public class Category1a
                     if (inputStatus.equals("yes") == true)
                     {
                         //make value to lower case
-                        Lower = Lower(finalString);
-                        WriteToFile(outputFileName, Lower);
+                        UorLCase = Lower(finalString);
+                        WriteToFile(outputFileName, UorLCase);
                     }
                     else if (inputStatus.equals("no") == true)
                     {
@@ -130,8 +129,8 @@ public class Category1a
                         finalString = scone.next();
                         finalString += scone.nextLine();
                         System.out.println();
-                        Lower = Lower(finalString);
-                        WriteToFile(outputFileName, Lower);
+                        UorLCase = Lower(finalString);
+                        WriteToFile(outputFileName, UorLCase);
                     }
                     menu = false;
                     break;
@@ -218,11 +217,11 @@ public class Category1a
     }
     public static String Lower(String inputString)
     {
-        String finalString = inputString.toUpperCase();
+        String finalString = inputString.toLowerCase();
         System.out.println(inputString);
         System.out.println();
         System.out.println("|-------------|");
-        System.out.println("|As Upper Case|");
+        System.out.println("|As Lower Case|");
         System.out.println("|-------------|");
         System.out.println();
         System.out.println(finalString);
