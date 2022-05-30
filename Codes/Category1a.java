@@ -57,6 +57,92 @@ public class Category1a
                 System.out.println();
                 CaseMenu("yes", inputFileName, outputFileName);
                 running = false;
+            }
         }
+    }
+    public static void CaseMenu(String inputStatus, String inputFileName, String outputFileName)
+    {
+        boolean menu = true;
+        String choice = "x";
+        Scanner scone = new Scanner(System.in);
+        String finalString = "";
+        if (inputStatus.equals("yes") == true)
+        {
+            finalString = ReadFile(inputFileName, outputFileName);
+            if (finalString.equals("n/a") == true)
+            {
+                System.out.println();
+                System.out.println("|----------------|");
+                System.out.println("|Please Try Again|");
+                System.out.println("|----------------|");
+                ReadInFileMenu(outputFileName);
+                menu = false;
+            }
+            else
+            {
+                menu = true;
+            }
+        }
+        do
+        {
+            System.out.println();
+            System.out.println("Select what you want to convert to");
+            System.out.println("Choices you have: ");
+            System.out.println("> (1) Change String to Upper Case");
+            System.out.println("> (2) Change String to Lower Case");
+            System.out.println("> (0) Exit the Program");
+            System.out.print("Enter your Choice: ");
+            choice = scone.next();
+            System.out.println();
+            
+            switch(choice)
+            {
+                case "1":
+                    if (inputStatus.equals("yes") == true)
+                    {
+                        //make value to upper case
+                        Upper(outputFileName, finalString);
+                    }
+                    else if (inputStatus.equals("no") == true)
+                    {
+                        System.out.println("Enter the String you would like to change to Upper Case: ");
+                        finalString = scone.next();
+                        finalString += scone.nextLine();
+                        System.out.println();
+                        Upper(outputFileName, finalString);
+                    }
+                    menu = false;
+                    break;
+                case "2":
+                    if (inputStatus.equals("yes") == true)
+                    {
+                        //make value to lower case
+                        Lower(outputFileName, finalString);
+                    }
+                    else if (inputStatus.equals("no") == true)
+                    {
+                        System.out.println("Enter the String you would like to change to Lower Case: ");
+                        finalString = scone.next();
+                        finalString += scone.nextLine();
+                        System.out.println();
+                        Lower(outputFileName, finalString);
+                    }
+                    menu = false;
+                    break;
+                case "0":
+                    System.out.println("Thank You for using the program");
+                    System.out.println();
+                    menu = false;
+                    break;
+                default:
+                    System.out.println("|------------------------------|");
+                    System.out.println("|Invalid Value Please Try Again|");
+                    System.out.println("|------------------------------|");
+                    System.out.println();
+                    menu = true;
+                    break;
+            }
+        } while (menu == true);
+        scone.close();
     }
 }
