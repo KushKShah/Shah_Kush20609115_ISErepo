@@ -71,4 +71,42 @@ public class Category1c {
         WriteToFile(outputFileName, finalValue);
         scone.close();
     }
+    public static String ReadFile(String inputFileName, String outputFileName)
+    {
+        FileInputStream fileStream = null;
+        InputStreamReader isr;
+        BufferedReader bufRdr;
+        String line;
+        String finalValue = "";
+        try
+        {
+            fileStream = new FileInputStream(inputFileName);
+            isr = new InputStreamReader(fileStream);
+            bufRdr = new BufferedReader(isr);
+            line = bufRdr.readLine();
+            while(line != null)
+            {
+                finalValue += CheckForValidNumber(line);
+                line = bufRdr.readLine();
+            }
+            fileStream.close();
+        }
+        catch(IOException errorDetails)
+        {
+            if(fileStream != null)
+            {
+                try
+                {
+                fileStream.close();
+                }
+                catch(IOException ex2)
+                { }
+            }
+            System.out.println("Error in fileProcessing: " + errorDetails.getMessage());
+            finalValue = "n/a";
+            System.out.println();
+        }
+        WriteToFile(outputFileName, finalValue);
+        return finalValue;
+    }
 }
