@@ -84,4 +84,46 @@ public class Category1d {
         }
         sc.close();
     }
+    public static void CaseMenu(String outputFileName, String RemovedNumString)
+    {
+        boolean menu = true;
+        String choice = "x";
+        Scanner scone = new Scanner(System.in);
+        do
+        {
+            System.out.println("Select what you want to convert to");
+            System.out.println("Choices you have: ");
+            System.out.println("> (1) Change String to Upper Case");
+            System.out.println("> (2) Change String to Lower Case");
+            System.out.println("> (0) Exit the Program");
+            System.out.print("Enter your Choice: ");
+            choice = scone.next();
+            System.out.println();
+            
+            switch(choice)
+            {
+                case "1":
+                    Upper(outputFileName, RemovedNumString);
+                    menu = false;
+                    break;
+                case "2":
+                    Lower(outputFileName, RemovedNumString);
+                    menu = false;
+                    break;
+                case "0":
+                    System.out.println("Thank You for using the program");
+                    System.out.println();
+                    menu = false;
+                    break;
+                default:
+                    System.out.println("|------------------------------|");
+                    System.out.println("|Invalid Value Please Try Again|");
+                    System.out.println("|------------------------------|");
+                    System.out.println();
+                    menu = true;
+                    break;
+            }
+        } while (menu == true);
+        scone.close();
+    }
 }
