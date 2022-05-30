@@ -63,4 +63,57 @@ public class Category1b {
         WriteToFile(outputFileName, finalString);
         scone.close();
     }
+    public static void ReadFile(String inputFileName, String outputFileName)
+    {
+        FileInputStream fileStream = null;
+        InputStreamReader isr;
+        BufferedReader bufRdr;
+        String line;
+        String finalString = "";
+        try
+        {
+            fileStream = new FileInputStream(inputFileName);
+            isr = new InputStreamReader(fileStream);
+            bufRdr = new BufferedReader(isr);
+            line = bufRdr.readLine();
+            while(line != null)
+            {
+                finalString += CheckForNum(line);
+                line = bufRdr.readLine();
+            }
+            fileStream.close();
+        }
+        catch(IOException errorDetails)
+        {
+            if(fileStream != null)
+            {
+                try
+                {
+                fileStream.close();
+                }
+                catch(IOException ex2)
+                { }
+            }
+            System.out.println("Error in fileProcessing: " + errorDetails.getMessage());
+            System.out.println();
+            finalString = "n/a";
+        }
+        WriteToFile(outputFileName, finalString);
+    }
+    public static void WriteToFile(String outputFileName, String finalString)
+    {
+        FileOutputStream fileStrm = null;
+        PrintWriter pw;
+        try
+        {
+            fileStrm = new FileOutputStream(outputFileName);
+            pw = new PrintWriter(fileStrm);
+            pw.println(finalString);
+            pw.close();
+        }
+        catch(IOException ioE)
+        {
+            System.out.println("Error in writing to file: " + ioE.getMessage());
+        }
+    }
 }
