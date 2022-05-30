@@ -69,7 +69,7 @@ public class Category1a
         String UorLCase = "";
         if (inputStatus.equals("yes") == true)
         {
-            finalString = ReadFile(inputFileName, outputFileName);
+            finalString = ReadFile(inputFileName);
             if (finalString.equals("n/a") == true)
             {
                 System.out.println();
@@ -150,7 +150,7 @@ public class Category1a
         } while (menu == true);
         scone.close();
     }
-    public static String ReadFile(String inputFileName, String outputFileName)
+    public static String ReadFile(String inputFileName)
     {
         FileInputStream fileStream = null;
         InputStreamReader isr;
