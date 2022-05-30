@@ -53,7 +53,8 @@ public class Category1c {
                 System.out.print("Enter the Name of The File: ");
                 inputFileName = sc.next();
                 System.out.println();
-                ReadFile(inputFileName, outputFileName);
+                String finalValue = ReadFile(inputFileName);
+                WriteToFile(outputFileName, finalValue);
                 running = false;
             }
         }
@@ -71,7 +72,7 @@ public class Category1c {
         WriteToFile(outputFileName, finalValue);
         scone.close();
     }
-    public static String ReadFile(String inputFileName, String outputFileName)
+    public static String ReadFile(String inputFileName)
     {
         FileInputStream fileStream = null;
         InputStreamReader isr;
@@ -106,7 +107,6 @@ public class Category1c {
             finalValue = "n/a";
             System.out.println();
         }
-        WriteToFile(outputFileName, finalValue);
         return finalValue;
     }
     public static void WriteToFile(String outputFileName, String finalValue)
