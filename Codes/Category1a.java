@@ -145,4 +145,41 @@ public class Category1a
         } while (menu == true);
         scone.close();
     }
+    public static String ReadFile(String inputFileName, String outputFileName)
+    {
+        FileInputStream fileStream = null;
+        InputStreamReader isr;
+        BufferedReader bufRdr;
+        String line;
+        String fileInput = "";
+        try
+        {
+            fileStream = new FileInputStream(inputFileName);
+            isr = new InputStreamReader(fileStream);
+            bufRdr = new BufferedReader(isr);
+            line = bufRdr.readLine();
+            while(line != null)
+            {
+                fileInput += line;
+                fileInput += "\n";
+                line = bufRdr.readLine();
+            }
+            fileStream.close();
+        }
+        catch(IOException errorDetails)
+        {
+            if(fileStream != null)
+            {
+                try
+                {
+                fileStream.close();
+                }
+                catch(IOException ex2)
+                { }
+            }
+            System.out.println("Error in fileProcessing: " + errorDetails.getMessage());
+            fileInput = "n/a";
+        }
+        return fileInput;
+    }
 }
