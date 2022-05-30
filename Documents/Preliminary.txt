@@ -123,6 +123,52 @@ Category 1:
         Exports: finalValue(String)
 
     (d): Remove any numeric values in a give string and then convert the string to Upper Case or Lower Case
+	Module: Main
+        Inputs: Nothing
+        Description: This Module Prints out what the code is meant to do and then Runs Module ReadInFileMenu.
+        Export: Nothing
 
+        Module: ReadInFileMenu
+        Inputs: outputFileName(String) is passed through the Main module
+        Description: This Module is used to ask the User if they want to Read in a file or they want to input a string.
+                        If yes the system asks the User to input the file name. Then ReadFile Module is ran through.
+                        If No the system asks the User to input the string they want to remove numbers from and then RemoveNum Module is ran.
+                        Afterwards the RemovedNumString is sent to the CaseMenu Module.
+        Export: Nothing
+
+        Module: CaseMenu
+        Inputs: outputFileName(String), RemovedNumString(String) is passed through the ReadInFileMenu module
+        Description: This Module is used to ask the user if they want to change the string to upper case or lower case.
+                        The RemovedNumString is sent to the Upper or Lower Modules depending on User request.
+        Export: Nothing
+
+        Module: ReadFile
+        Inputs: inputFileName(String) is passed in through ReadInFileMenu Module
+        Description: This Module is used to read in the file that the user tells the system to read in ReadInFileMenu Module.
+                        The Module runs RemoveNum Module For each line and stores the result as RemovedNumString.
+                        At the End the of the Module the RemovedNumString is Exported.
+        Exports: RemovedNumString(String)
+
+        Module: RemoveNum
+        Inputs: inputString(String) is passed in through the ReadInFileMenu Module
+        Description: This Module is used to remove the numbers from the String and save it as result.
+        Exports: result(String)
+
+        Module: WriteToFile
+        Inputs: outputFileName(String), finalString(String) is passed in from Upper or Lower Module
+        Description: This Module is used to Write out the results to the results file.
+        Exports: Nothing
+
+        Module: Upper
+        Inputs: outputFileName(String), inputString(String) is passed in through the CaseMenu Module
+        Description: This Module is used to turn the String to Upper case and then send the finalString to the WriteToFile Module.
+        Exports: Nothing
+
+        Module: Lower
+        Inputs: outputFileName(String), inputString(String) is passed in through the CaseMenu Module
+        Description: This Module is used to turn the String to Lower case and then send the finalString to the WriteToFile Module.
+        Exports: Nothing
+	
 Category 2:
-    (a): Converting a number which represents a length given in meters to feet and vice versa and centimeter to inches and vice versa.
+    (c): Converting a number which represents a time given in hours to minutes and vice versa, and time given in minutes to seconds and vice versa.
+
