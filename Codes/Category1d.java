@@ -180,4 +180,45 @@ public class Category1d {
         }
         return result;
     }
+    public static void WriteToFile(String outputFileName, String finalString)
+    {
+        FileOutputStream fileStrm = null;
+        try
+        {
+            fileStrm = new FileOutputStream(outputFileName);
+            PrintWriter pw = new PrintWriter(fileStrm);
+            pw.println(finalString);
+            pw.close();
+        }
+        catch(IOException ioE)
+        {
+            System.out.println("Error in writing to file: " + ioE.getMessage());
+        }
+    }
+    public static void Upper(String outputFileName, String inputString)
+    {
+        String finalString = inputString.toUpperCase();
+        System.out.println(inputString);
+        System.out.println();
+        System.out.println("|-------------|");
+        System.out.println("|As Upper Case|");
+        System.out.println("|-------------|");
+        System.out.println();
+        System.out.println(finalString);
+        System.out.println();
+        WriteToFile(outputFileName, finalString);
+    }
+    public static void Lower(String outputFileName, String inputString)
+    {
+        String finalString = inputString.toLowerCase();
+        System.out.println(inputString);
+        System.out.println();
+        System.out.println("|-------------|");
+        System.out.println("|As Lower Case|");
+        System.out.println("|-------------|");
+        System.out.println();
+        System.out.println(finalString);
+        System.out.println();
+        WriteToFile(outputFileName, finalString);
+    }
 }
