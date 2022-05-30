@@ -88,6 +88,7 @@ public class Category1d {
     {
         boolean menu = true;
         String choice = "x";
+        String UorLCase = "";
         Scanner scone = new Scanner(System.in);
         do
         {
@@ -103,11 +104,13 @@ public class Category1d {
             switch(choice)
             {
                 case "1":
-                    Upper(outputFileName, RemovedNumString);
+                    UorLCase = Upper(RemovedNumString);
+                    WriteToFile(outputFileName, UorLCase);
                     menu = false;
                     break;
                 case "2":
-                    Lower(outputFileName, RemovedNumString);
+                    UorLCase = Lower(RemovedNumString);
+                    WriteToFile(outputFileName, UorLCase);
                     menu = false;
                     break;
                 case "0":
@@ -195,7 +198,7 @@ public class Category1d {
             System.out.println("Error in writing to file: " + ioE.getMessage());
         }
     }
-    public static void Upper(String outputFileName, String inputString)
+    public static String Upper(String inputString)
     {
         String finalString = inputString.toUpperCase();
         System.out.println(inputString);
@@ -206,9 +209,9 @@ public class Category1d {
         System.out.println();
         System.out.println(finalString);
         System.out.println();
-        WriteToFile(outputFileName, finalString);
+        return finalString;
     }
-    public static void Lower(String outputFileName, String inputString)
+    public static String Lower(String inputString)
     {
         String finalString = inputString.toLowerCase();
         System.out.println(inputString);
@@ -219,6 +222,6 @@ public class Category1d {
         System.out.println();
         System.out.println(finalString);
         System.out.println();
-        WriteToFile(outputFileName, finalString);
+        return finalString;
     }
 }
