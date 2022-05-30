@@ -365,4 +365,23 @@ public class Category2c
         finalString += value + " Seconds in Minutes is " + stringValue + " Minutes";
         return finalString;
     }
+        public static Double StringToDouble(String value)
+    {
+        double conversion = 0;
+        try
+        {
+            conversion = Double.parseDouble(value);
+        }
+        catch (NumberFormatException e)
+        {
+            conversion = 0;
+        }
+        return conversion;
+    }
+    public static String TwoDecimalPlaces(Double finalValue)
+    {
+        DecimalFormat dF = new DecimalFormat("0.00");
+        String stringValue = dF.format(finalValue);
+        return stringValue;
+    }
 }
