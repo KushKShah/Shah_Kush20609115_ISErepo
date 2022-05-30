@@ -261,4 +261,30 @@ public class Category2c
             System.out.println("Error in writing to file: " + ioE.getMessage());
         }
     }
+    public static String ConvertHoursToMinutes(String value)
+    {
+        double finalValue = StringToDouble(value);
+        finalValue = finalValue*60;
+        String stringValue = TwoDecimalPlaces(finalValue);
+        String finalString = "";
+        if (finalValue == 0)
+        {
+            if (value.equals("0") == false)
+            {
+                System.out.println("|-------------|");
+                System.out.println("|Invalid Value|");
+                System.out.println("|-------------|");
+                finalString += "|-------------|";
+                finalString += "\n";
+                finalString += "|Invalid Value|";
+                finalString += "\n";
+                finalString += "|-------------|";
+                finalString += "\n";
+            }
+        }
+        System.out.println(value + " Hours in Minutes is " + stringValue + " Minutes");
+        System.out.println();
+        finalString += value + " Hours in Minutes is " + stringValue + " Minutes";
+        return finalString;
+    }
 }
