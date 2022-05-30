@@ -126,4 +126,42 @@ public class Category1d {
         } while (menu == true);
         scone.close();
     }
+    public static String ReadFile(String inputFileName)
+    {
+        FileInputStream fileStream = null;
+        InputStreamReader isr;
+        BufferedReader bufRdr;
+        String line;
+        String RemovedNumString = "";
+        try
+        {
+            fileStream = new FileInputStream(inputFileName);
+            isr = new InputStreamReader(fileStream);
+            bufRdr = new BufferedReader(isr);
+            line = bufRdr.readLine();
+            while(line != null)
+            {
+                RemovedNumString += RemoveNum(line);
+                RemovedNumString += "\n";
+                line = bufRdr.readLine();
+            }
+            fileStream.close();
+        }
+        catch(IOException errorDetails)
+        {
+            if(fileStream != null)
+            {
+                try
+                {
+                fileStream.close();
+                }
+                catch(IOException ex2)
+                { }
+            }
+            System.out.println("Error in fileProcessing: " + errorDetails.getMessage());
+            RemovedNumString = "n/a";
+            System.out.println();
+        }
+        return RemovedNumString;
+    }
 }
