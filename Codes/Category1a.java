@@ -198,4 +198,30 @@ public class Category1a
             System.out.println("Error in writing to file: " + ioE.getMessage());
         }
     }
+    public static void Upper(String outputFileName, String inputString)
+    {
+        String finalString = inputString.toUpperCase();
+        System.out.println(inputString);
+        System.out.println();
+        System.out.println("|-------------|");
+        System.out.println("|As Upper Case|");
+        System.out.println("|-------------|");
+        System.out.println();
+        System.out.println(finalString);
+        System.out.println();
+        WriteToFile(outputFileName, finalString);
+    }
+    public static void Lower(String outputFileName, String inputString)
+    {
+        String finalString = inputString.toUpperCase();
+        System.out.println(inputString);
+        System.out.println();
+        System.out.println("|-------------|");
+        System.out.println("|As Upper Case|");
+        System.out.println("|-------------|");
+        System.out.println();
+        System.out.println(finalString);
+        System.out.println();
+        WriteToFile(outputFileName, finalString);
+     }
 }
