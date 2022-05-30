@@ -112,11 +112,10 @@ public class Category1c {
     public static void WriteToFile(String outputFileName, String finalValue)
     {
         FileOutputStream fileStrm = null;
-        PrintWriter pw;
         try
         {
             fileStrm = new FileOutputStream(outputFileName);
-            pw = new PrintWriter(fileStrm);
+            PrintWriter pw = new PrintWriter(fileStrm);
             pw.println(finalValue);
             pw.close();
         }
@@ -125,5 +124,53 @@ public class Category1c {
             System.out.println("Error in writing to file: " + ioE.getMessage());
         }
     }
-}
+    public static String CheckForValidNumber(String inputValue)
+    {
+        char[] arrayChar = inputValue.toCharArray();
+        int ASCIIvalue = 0;
+        String finalValue = "";
+        for (int i = 0; i < arrayChar.length; i++)
+        {
+            ASCIIvalue = (int)arrayChar[i];
+            if ((ASCIIvalue >= 58) && (ASCIIvalue <= 127))
+            {
+                i = arrayChar.length - 1;
+            }
+        }
+        if ((ASCIIvalue >= 58) && (ASCIIvalue <= 127))
+        {
+            finalValue = "The Value: '" + inputValue + "'";
+            finalValue += "\n";
+            finalValue += "|------------------|";
+            finalValue += "\n";
+            finalValue += "|Not a Valid Number|";
+            finalValue += "\n";
+            finalValue += "|------------------|";
+            finalValue += "\n";
+            finalValue += "\n";
+            System.out.println("The Value: '" + inputValue + "'");
+            System.out.println("|------------------|");
+            System.out.println("|Not a Valid Number|");
+            System.out.println("|------------------|");
+            System.out.println();
+        }
+        else if ((ASCIIvalue >= 48) && (ASCIIvalue <= 57))
+        {
+            finalValue = "The Value: '" + inputValue + "'";
+            finalValue += "\n";
+            finalValue += "|------------|";
+            finalValue += "\n";
+            finalValue += "|Valid Number|";
+            finalValue += "\n";
+            finalValue += "|------------|";
+            finalValue += "\n";
+            finalValue += "\n";
+            System.out.println("The Value: '" + inputValue + "'");
+            System.out.println("|------------|");
+            System.out.println("|Valid Number|");
+            System.out.println("|------------|");
+            System.out.println();
+        }
+        return finalValue;
+    }
 }
