@@ -164,4 +164,20 @@ public class Category1d {
         }
         return RemovedNumString;
     }
+    public static String RemoveNum(String inputString)
+    {
+        char[] arrayChar = inputString.toCharArray();
+        String result = "";
+        int ASCIIvalue = 0;
+        for (int i = 0; i < arrayChar.length; i++)
+        {
+            ASCIIvalue = (int)arrayChar[i];
+            if ((ASCIIvalue >= 48) && (ASCIIvalue <= 57))
+            {
+                ASCIIvalue = 127;
+            }
+            result += (char)ASCIIvalue;
+        }
+        return result;
+    }
 }
