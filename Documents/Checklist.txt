@@ -1,0 +1,12 @@
+Question                                                        My Code Answer To questions
+Are The Methods Broken Down Correctly?                                  Yes
+Do the Methods only have a single responsibility?                       Yes
+Are All Methods Called Correctly?                                       Yes
+Does the Program Run Without Errors?                                    Yes
+Are all Methods Important?                                              Yes
+Are there any Methods that are Not Needed?                              No
+Is the Program getting too complex?                                     No
+Are the variable Names Suitable?                                        Yes
+Are there any unwanted variables?                                       No
+Are there any Global Variables?                                         No
+Is there any data redundancy occuring?                                  No
