@@ -182,4 +182,20 @@ public class Category1a
         }
         return fileInput; 
     }
+    public static void WriteToFile(String outputFileName, String finalString)
+    {
+        FileOutputStream fileStrm = null;
+        PrintWriter = pw;
+        try
+        {
+            fileStrm = new FileOutputStream(outputFileName);
+            pw = new PrintWriter(fileStrm);
+            pw.println(finalString);
+            pw.close();
+        }
+        catch(IOException ioE)
+        {
+            System.out.println("Error in writing to file: " + ioE.getMessage());
+        }
+    }
 }
