@@ -1,4 +1,4 @@
-#
+m
 # 20609115
 # Kush Shah
 #
@@ -171,4 +171,83 @@ Category 1:
 	
 Category 2:
     (c): Converting a number which represents a time given in hours to minutes and vice versa, and time given in minutes to seconds and vice versa.
+        Module: Main
+        Inputs: Nothing
+        Description: This Module Prints out what the code is meant to do and then Runs Module ReadInFileMenu.
+        Export: Nothing
 
+        Module: ReadInFileMenu
+        Inputs: outputFileName(String) is passed through the Main module
+        Description: This Module is used to ask the User if they want to Read in a file or they want to input a value.
+                        If yes the system asks the user to input the file name.
+                        Then CaseMenu is ran through.
+        Export: Nothing
+
+        Module: CaseMenu
+        Inputs: inputStatus(String), inputFileName(String), outputFileName(String) is passed in through ReadInFileMenu Module
+        Description: This Module is used to ask the User if they want to change Hours to Minutes, Minutes to Hours, Minutes to Seconds or Seconds to Minutes.
+                        Depending on inputStatus(yes or no) from ReadInFileMenu Cases are ran accordingly.
+                        If inputStatus is yes ReadFile Module is ran (doesn't matter what is being converted).
+                        If inputStatus is no the system asks the user to input a number which is sent to the Module depending on what the user wants to convert from and to.  
+                        Then finalString is sent to be written to results file through WriteToFile Module.
+        Exports: Nothing
+
+        Module: ReadFile
+        Inputs: inputFileName(String), choice(String) is passed in through CaseMenu Module
+        Description: This Module is used to read in the file that the user tells the system to read in CaseMenu Module.
+                        The Module runs Convert Modules depending on choice, this is done for each line and stores the result as finalString.
+                        At the End the of the Module the finalString is Exported.
+        Exports: finalString(String)
+
+        Module: WriteToFile
+        Inputs: outputFileName(String), finalString(String) is passed in from Upper or Lower Module
+        Description: This Module is used to Write out the results to the results file.
+        Exports: Nothing
+
+        Module: ConvertHoursToMinutes
+        Inputs: value(String) is passed in through ReadFile or CaseMenu Modules
+        Description: This Module is used to convert Time in Hours to Minutes.
+                        The Module changes the String value to Double finalValue by running StringToDouble Module.
+                        The finalValue is Multiplied by 60 and then the finalValue is set to two decimal places using TwoDecimalPlaces Module.
+                        If the value is invalid hence has a letter in it or has a space in the value the value is returned as 0 with an Invalid Value String.
+                        Then the finalString is exported out.
+        Exports: finalString(String)
+
+        Module: ConvertMinutesToHours
+        Inputs: value(String) is passed in through ReadFile or CaseMenu Modules
+        Description: This Module is used to convert Time in Minutes to Hours.
+                        The Module changes the String value to Double finalValue by running StringToDouble Module.
+                        The finalValue is Divided by 60 and then the finalValue is set to two decimal places using TwoDecimalPlaces Module.
+                        If the value is invalid hence has a letter in it or has a space in the value the value is returned as 0 with an Invalid Value String.
+                        Then the finalString is exported out.
+        Exports: finalString(String)
+
+        Module: ConvertMinutesToSeconds
+        Inputs: value(String) is passed in through ReadFile or CaseMenu Modules
+        Description: This Module is used to convert Time in Minutes to Seconds.
+                        The Module changes the String value to Double finalValue by running StringToDouble Module.
+                        The finalValue is Multiplied by 60 and then the finalValue is set to two decimal places using TwoDecimalPlaces Module.
+                        If the value is invalid hence has a letter in it or has a space in the value the value is returned as 0 with an Invalid Value String.
+                        Then the finalString is exported out.
+        Exports: finalString(String)
+
+        Module: ConvertSecondsToMinutes
+        Inputs: value(String) is passed in through ReadFile or CaseMenu Modules
+        Description: This Module is used to convert Time in Seconds to Minutes.
+                        The Module changes the String value to Double finalValue by running StringToDouble Module.
+                        The finalValue is Divided by 60 and then the finalValue is set to two decimal places using TwoDecimalPlaces Module.
+                        If the value is invalid hence has a letter in it or has a space in the value the value is returned as 0 with an Invalid Value String.
+                        Then the finalString is exported out.
+        Exports: finalString(String)
+
+        Module: StringToDouble
+        Inputs: value(String) is passed in through Convert Modules
+        Description: This Module is used to convert a String to a Double.
+                        Then the conversion is exported out.
+        Exports: conversion(String)
+
+        Module: TwoDecimalPlaces
+        Inputs: finalValue(Double) is passed in through Convert Modules.
+        Description: This Module is used to convert a multiple decimal places value to two decimal places.
+                        Which is given as a stringValue and is exported out.
+        Exports: stringValue(String)
