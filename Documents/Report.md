@@ -4,9 +4,10 @@
 ### Practical Class: Wednesdays, From 4pm to 6pm, In 314 218
 
 ## Introduction
-In this assignment We are expected to show our knowledge that we have received through this unit by applying software testing, modularity, version control and ethics. We are meant to use Version Control to maintain the all the code and other files. We are meant to create a simple software using modularity principles and test the software using black box and white box testing.
-In this Assignment we need to create softwares which can perform different forms of conversions such as string conversions and conversions of measurements such as time. We are required to cover all of category 1 which includes changing a string to upper case or lower case, identifing whether there is a number is a given string, also identify whether a give string is a valid number and we need to create a software to remove numbers from a string and change the string to upper or lower case. For Category 2 we are suppose to choose one Program that we would like to create. Therefore I have choosen to Convert a number which represents a time given in hours to minutes and vice versa, and time given in minutes to seconds and vice versa. For all these different Programs I have choosen to ask the User if they would like to readin a file or type in a string. All data is printed and is also written into a file.
-##Module Descriptions
+    In this assignment We are expected to show our knowledge that we have received through this unit by applying software testing, modularity, version control and ethics. We are meant to use Version Control to maintain the all the code and other files. We are meant to create a simple software using modularity principles and test the software using black box and white box testing.
+
+    In this Assignment we need to create softwares which can perform different forms of conversions such as string conversions and conversions of measurements such as time. We are required to cover all of category 1 which includes changing a string to upper case or lower case, identifing whether there is a number is a given string, also identify whether a give string is a valid number and we need to create a software to remove numbers from a string and change the string to upper or lower case. For Category 2 we are suppose to choose one Program that we would like to create. Therefore I have choosen to Convert a number which represents a time given in hours to minutes and vice versa, and time given in minutes to seconds and vice versa. For all these different Programs I have choosen to ask the User if they would like to readin a file or type in a string. All data is printed and is also written into a file.
+## Module Descriptions
 ### Category 1:
 #### (a): Converting a given string to Upper Case or Lower Case
     Submodule: Main
@@ -205,6 +206,7 @@ In this Assignment we need to create softwares which can perform different forms
     Imports: finalValue(Double) is passed in through Convert Modules.
     Description: This Module is used to convert a multiple decimal places value to two decimal places. Which is given as a stringValue and is exported out.
     Exports: stringValue(String)
+
 ## Modularity
 ### How To Run The Code
     (1): Start of by selecting the file you want to run.
@@ -408,8 +410,8 @@ Modified the code so that it can be test if the readfile is outputing correctly 
     }
 |TestCase|Input|Output|
 |:-------:|:----:|:-----:|
-|Path 1|inputString = "Ku9sh"|finalString = "The String: Ku9sh Does have a Number in it"|
-|Path 2|inputString = "Kush"|finalString = "The String: Kush Does NOT have a Number in it"|
+|Path 1|inputString = "Ku9sh"|finalString = "Includes a Number"|
+|Path 2|inputString = "Kush"|finalString = "Does NOT Have a Number"|
 |Path 3|inputString = ""|finalString = ""|
 
 ![Category1(b) CheckForNumPath 1](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category1(b)CheckForNumPath1.png)
@@ -469,8 +471,8 @@ Modified the code so that it can be test if the readfile is outputing correctly 
     }
 |TestCase|Input|Output|
 |:-------:|:----:|:-----:|
-|Path 1|inputValue = "91K15"|finalValue = "The Value: 91K15 is Not a Valid Number"|
-|Path 2|inputValue = "9115"|finalValue = "The Value: 9115 is a Valid Number"|
+|Path 1|inputValue = "91K15"|finalValue = "Not a Valid Number"|
+|Path 2|inputValue = "9115"|finalValue = "A Valid Number"|
 |Path 3|inputValue = ""|finalValue = ""|
 
 ![Category1(c) CheckForValidNumber Path 1](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category1(c)CheckForValidNumberPath1.png)
@@ -496,8 +498,8 @@ Modified the code so that it can be test if the readfile is outputing correctly 
     }
 |TestCase|Input|Output|
 |:-------:|:----:|:-----:|
-|path 1|inputString = "Hel91lo"|result = Hello|
-|path 2|inputString = "Hello"|result = Hello|
+|path 1|inputString = "Sh91ah"|result = Shah|
+|path 2|inputString = "Kush"|result = Kush|
 |path 3|inputString = ""|result = ""|
 
 ![Category1(d) RemoveNum Path 1](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category1(d)RemovNumPath1.png)
@@ -534,9 +536,9 @@ Modified the code so that it can be test if the readfile is outputing correctly 
     }
 |TestCase|Input|Output|
 |:-------:|:----:|:-----:|
-|path 1|value = "91 15"|finalString = Invalid Value 91 15 Hours in Minutes is 0.00 Minutes|
-|path 2|value = "0"|finalString = 0 Hours in Minutes is 0.00 Minutes|
-|path 3|value = "9115"|finalString = 9115 Hours in Minutes is 546900.00 Minutes|
+|path 1|value = "91 15"|"Invalid Value 9115Kush Hours is 0.00 Minutes"|
+|path 2|value = "0"|"0 Hours in Minutes is 0.00 Minutes"|
+|path 3|value = "9115"|"9115 Hours is 546900.00 Minutes"|
 
 ![Category2(c) ConvertHoursToMinutes Path1](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category2(c)ConvertHoursToMinutesPath1.png)
 ![Category2(c) ConvertHoursToMinutes Path2](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category2(c)ConvertHoursToMinutesPath2.png)
@@ -575,3 +577,29 @@ Modified the code so that it can be test if the readfile is outputing correctly 
 |path 1|finalValue = 20609.115|stringValue = "20609.12"|
 
 ![Category2(c) TwoDecimalPlaces Path 1](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category2(c)TwoDecimalPlacesPath1.png)
+## Test implementation and execution
+### How to Run the Test Code
+    1. Move directory to Test Cases
+    2. Compile the File you want to test(if you want to test Category1a BB type Category1aBB.java with the Code file Category1aTestCase.java (same naming type just change number and letter after number to which ever Category))
+    3. Run the File
+    4. If there is no output it means that the test was valid.
+### Run Test Case
+    I went through all test cases but did not encounter any problems and there was no output therefore the test was valid for all Testing.
+### Improvement of Code
+    I did change the code to print out just 1 string rather than multiple strings. This made it easier to test my code and all the if statements. I did not get any new results as I implemented the changes before starting the code for the tests. Test codes can be found in the Folder Test Cases.
+
+|Module Name|BB test Design(EP)|BB test design (BVA)|WB test design|EP test code (implemented/run)|BVA test code (implemented/run)|White-Box testing (implemented/run)|
+|:---------:|:----------------:|:------------------:|:------------:|:----------------------------:|:-----------------------------:|:----------------------------------:|
+|ReadFile|Done|Not Done|Not Done|Done|Not Done|Not Done|
+|Upper|Done|Not Done|Done|Done|Not Done|Done|
+|Lower|Done|Not Done|Done|Done|Not Done|Done|
+|CheckForNum|Done|Not Done|Done|Done|Not Done|Done|
+|CheckForValidNumber|Done|Not Done|Done|Done|Not Done|Done|
+|RemoveNum|Done|Not Done|Done|Done|Not Done|Done|
+|ConvertHoursToMinutes|Done|Not Done|Done|Done|Not Done|Done|
+|ConvertMinutesToHours|Done|Not Done|Done|Done|Not Done|Done|
+|ConvertMinutesToSeconds|Done|Not Done|Done|Done|Not Done|Done|
+|ConvertSecondsToMinutes|Done|Not Done|Done|Done|Not Done|Done|
+|StringToDouble|Done|Not Done|Done|Done|Not Done|Done|
+|TwoDecimalPlaces|Done|Not Done|Done|Done|Not Done|Done|
+## Ethics
