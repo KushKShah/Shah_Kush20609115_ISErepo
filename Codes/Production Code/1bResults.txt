@@ -1,0 +1,101 @@
+The String: 'cQVoR2lgGvVSBvEMsEYqF'
+|------------------------|
+|Does have a Number in it|
+|------------------------|
+
+The String: 'Rdtgpt23gwvvxEgKsLzysH'
+|------------------------|
+|Does have a Number in it|
+|------------------------|
+
+The String: 'BvZasTVSLJwhhFEcICZD'
+|----------------------------|
+|Does NOT have a Number in it|
+|----------------------------|
+
+The String: 'YCZONmBJTNTmIIShWRJk'
+|----------------------------|
+|Does NOT have a Number in it|
+|----------------------------|
+
+The String: 'OBiPopAE2pqSJAdyjamvU'
+|------------------------|
+|Does have a Number in it|
+|------------------------|
+
+The String: 'aOGZrAszf23zvzzibPfGLB'
+|------------------------|
+|Does have a Number in it|
+|------------------------|
+
+The String: 'nAYRfgFJeDndodXqRTXc'
+|----------------------------|
+|Does NOT have a Number in it|
+|----------------------------|
+
+The String: 'KskKarHswCr23qPTiBDtrh'
+|------------------------|
+|Does have a Number in it|
+|------------------------|
+
+The String: 'cmtDbriLdVePBMPWhjTi'
+|----------------------------|
+|Does NOT have a Number in it|
+|----------------------------|
+
+The String: 'xLRdwNTBwUbFkDVZmKRA'
+|----------------------------|
+|Does NOT have a Number in it|
+|----------------------------|
+
+The String: 'qBEDUiucmJMbHexERSrg'
+|----------------------------|
+|Does NOT have a Number in it|
+|----------------------------|
+
+The String: 'KdgJSKOJlMzNsAvkxSgG'
+|----------------------------|
+|Does NOT have a Number in it|
+|----------------------------|
+
+The String: 'abelsfFcZnuKDJlxtuoC'
+|----------------------------|
+|Does NOT have a Number in it|
+|----------------------------|
+
+The String: 'IWF3HhOoocTzaJGDmPZZd'
+|------------------------|
+|Does have a Number in it|
+|------------------------|
+
+The String: 'TKFfTlokmhvKgfBngydS'
+|----------------------------|
+|Does NOT have a Number in it|
+|----------------------------|
+
+The String: 'bRvh3JelAMJmyWesMxigI'
+|------------------------|
+|Does have a Number in it|
+|------------------------|
+
+The String: 'lLHPAoUUPwOYxfFXuSbU'
+|----------------------------|
+|Does NOT have a Number in it|
+|----------------------------|
+
+The String: 'rRstO3DmGoSDkFKJJvTrt'
+|------------------------|
+|Does have a Number in it|
+|------------------------|
+
+The String: 'zbzmdn6FcmbTBhSDFiJmk'
+|------------------------|
+|Does have a Number in it|
+|------------------------|
+
+The String: 'boGlLzdVKhTYmknuaLOP'
+|----------------------------|
+|Does NOT have a Number in it|
+|----------------------------|
+
+
