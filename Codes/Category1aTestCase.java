@@ -1,3 +1,4 @@
+import java.io.*;
 public class Category1aTestCase
 {
     public static String ReadFile(String inputFileName)
