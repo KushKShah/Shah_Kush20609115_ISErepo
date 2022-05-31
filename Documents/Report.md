@@ -205,3 +205,16 @@ In this Assignment we need to create softwares which can perform different forms
     Imports: finalValue(Double) is passed in through Convert Modules.
     Description: This Module is used to convert a multiple decimal places value to two decimal places. Which is given as a stringValue and is exported out.
     Exports: stringValue(String)
+## Modularity
+### How To Run The Code
+    (1): Start of by selecting the file you want to run.
+    (2): Then Run the File
+    (3): The Program will as you if you want to read in a file or input a string
+    (4): If you want to read in a file input 'yes' else input 'no'
+    (5): If its a Yes It will ask you to input a file name then it will run the ReadFile Method If its an Invalid File the Program will ask you to input the File Name again.
+    (5): If its a No the Program will ask you to input a string
+    (6): Once that is done If you are running a program where you need to choose if you want to change the string to upper or lower or if you need to choose what you want to convert the time to the program will ask you to choose what you want to convert it to. 
+    (7): The Program will work through the data inputs and Print out results and also write out the Results to a File.
+    (8): The Program will Quit once this is completed.
+### Discussion on how different modularity concepts are applied in your code
+    I applied Modularity by breaking down my software into small methods. I made sure keeping my code as simple as possible which allowed me to re-use the same code again for the other softwares I needed to make. I made sure keeping Low coupling by not having too many interdependencies between methods. I made sure keeping Cohesion high by having each module doing only a single well-defined task. There are no Global Variables there for coupling is low. I have also made sure to have minimal data redundancy.
