@@ -315,3 +315,263 @@ Modified the code so that it can be test if the readfile is outputing correctly 
 |:-------:|:----:|:-----:|
 |has decimal places|2060.9115|stringValue = "2060.91"|
 |no decimal places|9115|stringValue = "9115.00"|
+## White-Box Testing
+### Category 1(a):
+#### Upper: Since there are no conditional statements, there is only one path, and hence one test case.
+    public static String Upper(String inputString)
+    {
+        String finalString = inputString.toUpperCase();
+        System.out.println(inputString);
+        System.out.println();
+        System.out.println("|-------------|");
+        System.out.println("|As Upper Case|");
+        System.out.println("|-------------|");
+        System.out.println();
+        System.out.println(finalString);
+        System.out.println();
+        return finalString;
+    }
+|TestCase|Input|Output|
+|:-------:|:----:|:-----:|
+|Path 1|inputString = "KushKShah"|finalString = "KUSHKSHAH"|
+
+![Category1(a) Upper](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category1(a)Upper.png)
+#### Lower: Since there are no conditional statements, there is only one path, and hence one test case.
+    public static String Lower(String inputString)
+    {
+        String finalString = inputString.toLowerCase();
+        System.out.println(inputString);
+        System.out.println();
+        System.out.println("|-------------|");
+        System.out.println("|As Lower Case|");
+        System.out.println("|-------------|");
+        System.out.println();
+        System.out.println(finalString);
+        System.out.println();
+        return finalString;
+    }
+|TestCase|Input|Output|
+|:-------:|:----:|:-----:|
+|Path 1|inputString = "KushKShah"|finalString = "kushkshah"|
+
+![Category1(a) Lower](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category1(a)Lower.png)
+### Category 1(b):
+#### CheckForNum: Since there are conditional statements, there will be three paths, and hence three test cases.
+    public static String CheckForNum(String inputString)
+    {
+        char[] arrayChar = inputString.toCharArray();
+        int ASCIIvalue = 0;
+        String finalString = "";
+        for (int i = 0; i < arrayChar.length; i++)
+        {
+            ASCIIvalue = (int)arrayChar[i];
+            if ((ASCIIvalue >= 48) && (ASCIIvalue <= 57))
+            {
+                finalString = "The String: '" + inputString + "'";
+                finalString += "\n";
+                finalString += "|------------------------|";
+                finalString += "\n";
+                finalString += "|Does have a Number in it|";
+                finalString += "\n";
+                finalString += "|------------------------|";
+                finalString += "\n";
+                finalString += "\n";
+                System.out.println("The String: '" + inputString + "'");
+                System.out.println("|------------------------|");
+                System.out.println("|Does have a Number in it|");
+                System.out.println("|------------------------|");
+                System.out.println();
+                i = arrayChar.length - 1;
+            }
+            else if ((ASCIIvalue >= 58) && (ASCIIvalue <= 127))
+            {
+                if (i == arrayChar.length - 1)
+                {
+                    finalString = "The String: '" + inputString + "'";
+                    finalString += "\n";
+                    finalString += "|----------------------------|";
+                    finalString += "\n";
+                    finalString += "|Does NOT have a Number in it|";
+                    finalString += "\n";
+                    finalString += "|----------------------------|";
+                    finalString += "\n";
+                    finalString += "\n";
+                    System.out.println("The String: '" + inputString + "'");
+                    System.out.println("|----------------------------|");
+                    System.out.println("|Does NOT have a Number in it|");
+                    System.out.println("|----------------------------|");
+                    System.out.println();
+                }
+            }
+        }
+        return finalString;
+    }
+|TestCase|Input|Output|
+|:-------:|:----:|:-----:|
+|Path 1|inputString = "Ku9sh"|finalString = "The String: Ku9sh Does have a Number in it"|
+|Path 2|inputString = "Kush"|finalString = "The String: Kush Does NOT have a Number in it"|
+|Path 3|inputString = ""|finalString = ""|
+
+![Category1(b) CheckForNumPath 1](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category1(b)CheckForNumPath1.png)
+![Category1(b) CheckForNumPath 2](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category1(b)CheckForNumPath2.png)
+![Category1(b) CheckForNumPath 3](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category1(b)CheckForNumPath3.png)
+### Category 1(c):
+#### CheckForValidNumber: Since there are conditional statements, there will be three paths, and hence three test cases.
+    public static String CheckForValidNumber(String inputValue)
+        {
+            char[] arrayChar = inputValue.toCharArray();
+            int ASCIIvalue = 0;
+            String finalValue = "";
+            for (int i = 0; i < arrayChar.length; i++)
+            {
+                ASCIIvalue = (int)arrayChar[i];
+                if ((ASCIIvalue >= 58) && (ASCIIvalue <= 127))
+                {
+                    finalValue = "The Value: '" + inputValue + "'";
+                    finalValue += "\n";
+                    finalValue += "|------------------|";
+                    finalValue += "\n";
+                    finalValue += "|Not a Valid Number|";
+                    finalValue += "\n";
+                    finalValue += "|------------------|";
+                    finalValue += "\n";
+                    finalValue += "\n";
+                    System.out.println("The Value: '" + inputValue + "'");
+                    System.out.println("|------------------|");
+                    System.out.println("|Not a Valid Number|");
+                    System.out.println("|------------------|");
+                    System.out.println();
+                    i = arrayChar.length - 1;
+                }
+                else if ((ASCIIvalue >= 48) && (ASCIIvalue <= 57))
+                {
+                    if (i == arrayChar.length - 1)
+                    {
+                        finalValue = "The Value: '" + inputValue + "'";
+                        finalValue += "\n";
+                        finalValue += "|------------|";
+                        finalValue += "\n";
+                        finalValue += "|Valid Number|";
+                        finalValue += "\n";
+                        finalValue += "|------------|";
+                        finalValue += "\n";
+                        finalValue += "\n";
+                        System.out.println("The Value: '" + inputValue + "'");
+                        System.out.println("|------------|");
+                        System.out.println("|Valid Number|");
+                        System.out.println("|------------|");
+                        System.out.println();
+                    }
+                }
+            }
+            return finalValue;
+        }
+    }
+|TestCase|Input|Output|
+|:-------:|:----:|:-----:|
+|Path 1|inputValue = "91K15"|finalValue = "The Value: 91K15 is Not a Valid Number"|
+|Path 2|inputValue = "9115"|finalValue = "The Value: 9115 is a Valid Number"|
+|Path 3|inputValue = ""|finalValue = ""|
+
+![Category1(c) CheckForValidNumber Path 1](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category1(c)CheckForValidNumberPath1.png)
+![Category1(c) CheckForValidNumber Path 2](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category1(c)CheckForValidNumberPath2.png)
+![Category1(c) CheckForValidNumber Path 3](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category1(c)CheckForValidNumberPath3.png)
+### Category 1(d):
+#### RemoveNum: Since there are conditional statements, there will be three paths, and hence three test cases.
+    public static String RemoveNum(String inputString)
+    {
+        char[] arrayChar = inputString.toCharArray();
+        String result = "";
+        int ASCIIvalue = 0;
+        for (int i = 0; i < arrayChar.length; i++)
+        {
+            ASCIIvalue = (int)arrayChar[i];
+            if ((ASCIIvalue >= 48) && (ASCIIvalue <= 57))
+            {
+                ASCIIvalue = 127;
+            }
+            result += (char)ASCIIvalue;
+        }
+        return result;
+    }
+|TestCase|Input|Output|
+|:-------:|:----:|:-----:|
+|path 1|inputString = "Hel91lo"|result = Hello|
+|path 2|inputString = "Hello"|result = Hello|
+|path 3|inputString = ""|result = ""|
+
+![Category1(d) RemoveNum Path 1](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category1(d)RemovNumPath1.png)
+![Category1(d) RemoveNum Path 2](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category1(d)RemovNumPath2.png)
+![Category1(d) RemoveNum Path 3](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category1(d)RemovNumPath3.png)
+
+### Category 2(c):
+#### RemoveConvertHoursToMinutes: Since there are conditional statements, there will be three paths, and hence three test cases.
+    public static String ConvertHoursToMinutes(String value)
+    {
+        double finalValue = StringToDouble(value);
+        finalValue = finalValue*60;
+        String stringValue = TwoDecimalPlaces(finalValue);
+        String finalString = "";
+        if (finalValue == 0)
+        {
+            if (value.equals("0") == false)
+            {
+                System.out.println("|-------------|");
+                System.out.println("|Invalid Value|");
+                System.out.println("|-------------|");
+                finalString += "|-------------|";
+                finalString += "\n";
+                finalString += "|Invalid Value|";
+                finalString += "\n";
+                finalString += "|-------------|";
+                finalString += "\n";
+            }
+        }
+        System.out.println(value + " Hours in Minutes is " + stringValue + " Minutes");
+        System.out.println();
+        finalString += value + " Hours in Minutes is " + stringValue + " Minutes";
+        return finalString;
+    }
+|TestCase|Input|Output|
+|:-------:|:----:|:-----:|
+|path 1|value = "91 15"|finalString = Invalid Value 91 15 Hours in Minutes is 0.00 Minutes|
+|path 2|value = "0"|finalString = 0 Hours in Minutes is 0.00 Minutes|
+|path 3|value = "9115"|finalString = 9115 Hours in Minutes is 546900.00 Minutes|
+
+![Category2(c) ConvertHoursToMinutes Path1](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category2(c)ConvertHoursToMinutesPath1.png)
+![Category2(c) ConvertHoursToMinutes Path2](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category2(c)ConvertHoursToMinutesPath2.png)
+![Category2(c) ConvertHoursToMinutes Path3](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category2(c)ConvertHoursToMinutesPath3.png)
+#### StringToDouble: Since there is try-catch statement, there will be two paths, and hence two test cases.
+    public static Double StringToDouble(String value)
+    {
+        double conversion = 0;
+        try
+        {
+            conversion = Double.parseDouble(value);
+        }
+        catch (NumberFormatException e)
+        {
+            conversion = 0;
+        }
+        return conversion;
+    }
+|TestCase|Input|Output|
+|:-------:|:----:|:-----:|
+|path 1|value = "9115"|conversion = 9115|
+|path 2|value = "91 15"|conversion = 0|
+
+![Category2(c) CStringToDoublePath 1](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category2(c)StringToDoublePath1.png)
+![Category2(c) StringToDoublePath 2](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category2(c)StringToDoublePath2.png)
+
+#### TwoDecimalPlaces: Since there are no conditional statements, there will be only one path, and hence one test case.
+    public static String TwoDecimalPlaces(Double finalValue)
+    {
+        DecimalFormat dF = new DecimalFormat("0.00");
+        String stringValue = dF.format(finalValue);
+        return stringValue;
+    }
+|TestCase|Input|Output|
+|:-------:|:----:|:-----:|
+|path 1|finalValue = 20609.115|stringValue = "20609.12"|
+
+![Category2(c) TwoDecimalPlaces Path 1](https://raw.githubusercontent.com/KushKShah/Shah_Kush20609115_ISErepo/main/Documents/Category2(c)TwoDecimalPlacesPath1.png)
