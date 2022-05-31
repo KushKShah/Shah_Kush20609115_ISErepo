@@ -233,3 +233,85 @@ In this Assignment we need to create softwares which can perform different forms
 |Is there any data redundancy occuring?|YES: Very Minimal that can't be avoided|
 ### Addressed any Issues
 I had a few variables that did not need to be passed in therefore I removed those variables to make my code easier to understand and also makes it easier to flow.
+## Black-Box Test Cases
+    //There are No Boundaries in the inputs that the User may send therefore Boundary Value Analysis. cannot be done in my Coding
+    //So all below Black-Box Tests are Equivalence Partitioning.
+### Category 1(a):
+#### ReadFile
+Modified the code so that it can be test if the readfile is outputing correctly or not
+|Category|Input|Output|
+|:-------:|:----:|:-----:|
+|Correct File Name|Input1a.txt|FinalString = "1"|
+|Wrong File Name|Kush|FinalString = "n/a"|
+#### Upper
+|Category|Input|Output|
+|:-------:|:----:|:-----:|
+|Input a String|Shah|"SHAH"|
+#### Lower
+|Category|Input|Output|
+|:-------:|:----:|:-----:|
+|Input a String|Kush Kalpeshkumar Shah|"kush kalpeshkumar shah"|
+### Category 1(b):
+#### CheckForNum
+|Category|Input|Output|
+|:-------:|:----:|:-----:|
+|Includes a Number|"Sh9115ah"|"Includes a Number"|
+|Does not include a Number|"Shah"|"Does NOT Have a Number"|
+### Category 1(c):
+#### ReadFile
+    Same as Category 1a.
+#### CheckForValidNumber
+|Category|Input|Output|
+|:-------:|:----:|:-----:|
+|Not A Valid Number|"2060kush9115"|"Not a Valid Number"|
+|Not A Valid Number|"2060 9115"|"Not a Valid Number"|
+|A Valid Number|"20609115"|"A Valid Number"|
+### Category 1(d):
+#### ReadFile
+    Same as Category 1a.
+#### RemoveNum
+|Category|Input|Output|
+|:-------:|:----:|:-----:|
+|Has a Number in it|Ku9115sh|result = "Kush"|
+|Does Not Have a Number|Kush| result = "Kush"|
+#### Upper
+|Category|Input|Output|
+|:-------:|:----:|:-----:|
+|Input a String|Kush|"KUSH"|
+#### Lower
+|Category|Input|Output|
+|:-------:|:----:|:-----:|
+|Input a String|Kush|"kush"|
+### Category 2(c):
+#### ReadFile
+    Same as Category 1a.
+#### ConvertHoursToMinutes
+|Category|Input|Output|
+|:-------:|:----:|:-----:|
+|Not a valid Input|9115Kush|"Invalid Value 9115Kush Hours is 0.00 Minutes"|
+|Valid Input|9115|"9115 Hours is 546900.00 Minutes"|
+#### ConvertMinutesToHours
+|Category|Input|Output|
+|:-------:|:----:|:-----:|
+|Not a valid Input|9115Kush|"Invalid Value 9115Kush Minutes is 0.00 Hours"|
+|Valid Input|9115|"9115 Minutes is 151.92 Hours"|
+#### ConvertMinutesToSeconds
+|Category|Input|Output|
+|:-------:|:----:|:-----:|
+|Not a valid Input|9115Kush|"Invalid Value 9115Kush Minutes is 0.00 Seconds"|
+|Valid Input|9115|"9115 Minutes is 546900.00 Seconds"|
+#### ConvertSecondsToMinutes
+|Category|Input|Output|
+|:-------:|:----:|:-----:|
+|Not a valid Input|9115Kush|"Invalid Value 9115Kush Seconds is 0.00 Minutes"|
+|Valid Input|9115|"9115 Seconds is 151.92 Minutes"|
+#### StringToDouble
+|Category|Input|Output|
+|:-------:|:----:|:-----:|
+|Valid Number|"9115"|conversion = 9115.00|
+|Not a Valid Number|"91kush15"|conversion = 0.00|
+#### TwoDecimalPlaces
+|Category|Input|Output|
+|:-------:|:----:|:-----:|
+|has decimal places|2060.9115|stringValue = "2060.91"|
+|no decimal places|9115|stringValue = "9115.00"|
