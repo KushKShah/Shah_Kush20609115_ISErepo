@@ -6,3 +6,202 @@
 ## Introduction
 In this assignment We are expected to show our knowledge that we have received through this unit by applying software testing, modularity, version control and ethics. We are meant to use Version Control to maintain the all the code and other files. We are meant to create a simple software using modularity principles and test the software using black box and white box testing.
 In this Assignment we need to create softwares which can perform different forms of conversions such as string conversions and conversions of measurements such as time. We are required to cover all of category 1 which includes changing a string to upper case or lower case, identifing whether there is a number is a given string, also identify whether a give string is a valid number and we need to create a software to remove numbers from a string and change the string to upper or lower case. For Category 2 we are suppose to choose one Program that we would like to create. Therefore I have choosen to Convert a number which represents a time given in hours to minutes and vice versa, and time given in minutes to seconds and vice versa. For all these different Programs I have choosen to ask the User if they would like to readin a file or type in a string. All data is printed and is also written into a file.
+##Module Descriptions
+### Category 1:
+#### (a): Converting a given string to Upper Case or Lower Case
+    Submodule: Main
+    Imports: Nothing
+    Description: This Module Prints out what the code is meant to do and then Runs Module ReadInFileMenu.
+    Export: Nothing
+
+    Submodule: ReadInFileMenu
+    Imports: outputFileName(String) is passed through the Main module
+    Description: This Module is used to ask the User if they want to Read in a file or they want to input a string. If yes the system asks the user to input the file name. Then CaseMenu is ran through.
+    Export: Nothing
+
+    Submodule: CaseMenu
+    Imports: inputStatus(String), inputFileName(String), outputFileName(String) is passed through the ReadInFileMenu module
+    Description: This Module is used to ask the user if they want to change the string to upper case or lower case. Once the user inputs a valid input the Module runs according to the inputStatus(reading file is yes or no). If reading file is yes then it runs the ReadFile Module, but if it is no the Module asks the user to input the string they want to change the case of. Once this is done the Final String is sent to the Upper or Lower Modules depending on User request. Then the UorLcase is sent to the WriteToFile Module.
+    Export: Nothing
+
+    Submodule: ReadFile
+    Imports: inputFileName(String), outputFileName(String) are passed in through CaseMenu Module
+    Description: This Module is used to read in the file that the user tells the system to read in ReadInFileMenu Module. The Module saves line by line to the String fileInput then once the reading of the file is complete the Module returns the String fileInput.
+    Exports: fileInput(String)
+
+    Submodule: WriteToFile
+    Imports: outputFileName(String), finalString(String) is passed in from Modules Upper or Lower
+    Description: This Module is used to Write out the results to the results file.
+    Exports: Nothing
+
+    Submodule: Upper
+    Imports: outputFileName(String), inputString(String) is passed in through the CaseMenu Module
+    Description: This Module is used to turn the String to Upper case.
+    Exports: finalString(String)
+
+    Submodule: Lower
+    Imports: outputFileName(String), inputString(String) is passed in through the CaseMenu Module
+    Description: This Module is used to turn the String to Lower case.
+    Exports: finalString(String)
+
+#### (b): Identify whether numeric values are in a give string
+    Submodule: Main
+    Imports: Nothing
+    Description: This Module Prints out what the code is meant to do and then Runs Module ReadInFileMenu.
+    Export: Nothing
+
+    Submodule: ReadInFileMenu
+    Imports: outputFileName(String) is passed through the Main module
+    Description: This Module is used to ask the User if they want to Read in a file or they want to input a string. If yes the system asks the user to input the file name. Then ReadFile Module is ran through.
+    Export: Nothing
+
+    Submodule: NoMenu
+    Imports: outputFileName(String) is passed in through the ReadInFileMenu Module
+    Description: This Module is used to Ask the User to input a string to identify if it has a number in it or not. Used only if User says no in the ReadInFileMenu Module. Once the User inputs a String the CheckForNum Module is ran. The finalString is sent to be written to the output file through WriteToFile Module.
+    Exports: Nothing
+
+    Submodule: ReadFile
+    Imports: inputFileName(String), outputFileName(String) are passed in through ReadInFileMenu Module
+    Description: This Module is used to read in the file that the user tells the system to read in ReadInFileMenu Module. The Module runs CheckForNum Module For each line and stores the result as finalString. At the End the of the Module the finalString is sent to be written in to the output file through WriteToFile Module.
+    Exports: Nothing
+
+    Submodule: WriteToFile
+    Imports: outputFileName(String), finalString(String) is passed in from Module ReadFile or NoMenu Module
+    Description: This Module is used to Write out the results to the results file.
+    Exports: Nothing
+
+    Submodule: CheckForNum
+    Imports: inputString(String) is passed in from Modules ReadFile or NoMenu
+     Description: This Module is used to Check if the given String has a Number in the String and Prints out if it does or does not. This module also saves the outcome to the finalString variable which is exported.
+    Exports: finalString(String)
+
+#### (c): Identify whether a given string is a valid number or not
+    Submodule: Main
+    Imports: Nothing
+    Description: This Module Prints out what the code is meant to do and then Runs Module ReadInFileMenu.
+    Export: Nothing
+
+    Submodule: ReadInFileMenu
+    Imports: outputFileName(String) is passed through the Main module
+    Description: This Module is used to ask the User if they want to Read in a file or they want to input a value. If yes the system asks the user to input the file name. Then ReadFile Module is ran through and then WriteToFile is ran through to write the file out.
+    Export: Nothing
+
+    Submodule: NoMenu
+    Imports: outputFileName(String) is passed in through the ReadInFileMenu Module
+    Description: This Module is used to Ask the User to input a value to identify if it is a valid Number. Used only if User says no in the ReadInFileMenu Module. Once the User inputs a value the CheckForValidNumber Module is ran. The finalValue is sent to be written to the output file through WriteToFile Module.
+    Exports: Nothing
+
+    Submodule: ReadFile
+    Imports: inputFileName(String), outputFileName(String) are passed in through ReadInFileMenu Module
+    Description: This Module is used to read in the file that the user tells the system to read in ReadInFileMenu Module. The Module runs CheckForValidNumber Module For each line and stores the result as finalValue. At the End of the Module the finalValue is exported.
+    Exports: finalValue(String)
+
+    Submodule: WriteToFile
+    Imports: outputFileName(String), finalValue(String) is passed in from Module ReadFile or NoMenu Module
+    Description: This Module is used to Write out the results to the results file.
+    Exports: Nothing
+
+    Submodule: CheckForValidNumber
+    Imports: inputString(String) is passed in from Modules ReadFile or NoMenu
+    Description: This Module is used to Check if the given Value is a Valid Number and Prints out if it is or is not. This module also saves the outcome to the finalValue variable which is exported.
+    Exports: finalValue(String)
+
+#### (d): Remove any numeric values in a give string and then convert the string to Upper Case or Lower Case
+
+    Submodule: Main
+    Imports: Nothing
+    Description: This Module Prints out what the code is meant to do and then Runs Module ReadInFileMenu.
+    Export: Nothing
+
+    Submodule: ReadInFileMenu
+    Imports: outputFileName(String) is passed through the Main module
+    Description: This Module is used to ask the User if they want to Read in a file or they want to input a string. If yes the system asks the User to input the file name. Then ReadFile Module is ran through. If No the system asks the User to input the string they want to remove numbers from and then RemoveNum Module is ran. Afterwards the RemovedNumString is sent to the CaseMenu Module.
+    Export: Nothing
+
+    Submodule: CaseMenu
+    Imports: outputFileName(String), RemovedNumString(String) is passed through the ReadInFileMenu module
+    Description: This Module is used to ask the user if they want to change the string to upper case or lower case. The RemovedNumString is sent to the Upper or Lower Modules depending on User request. Then the UorLcase String is sent to the WriteToFile Module.
+    Export: Nothing
+
+    Submodule: ReadFile
+    Imports: inputFileName(String) is passed in through ReadInFileMenu Module
+    Description: This Module is used to read in the file that the user tells the system to read in ReadInFileMenu Module. The Module runs RemoveNum Module For each line and stores the result as RemovedNumString. At the End the of the Module the RemovedNumString is Exported.
+    Exports: RemovedNumString(String)
+
+    Submodule: RemoveNum
+    Imports: inputString(String) is passed in through the ReadInFileMenu Module
+    Description: This Module is used to remove the numbers from the String and save it as result.
+    Exports: result(String)
+
+    Submodule: WriteToFile
+    Imports: outputFileName(String), finalString(String) is passed in from Upper or Lower Module
+    Description: This Module is used to Write out the results to the results file.
+    Exports: Nothing
+
+    Submodule: Upper
+    Imports: outputFileName(String), inputString(String) is passed in through the CaseMenu Module
+    Description: This Module is used to turn the String to Upper case.
+    Exports: finalString(String)
+
+    Submodule: Lower
+    Imports: outputFileName(String), inputString(String) is passed in through the CaseMenu Module
+    Description: This Module is used to turn the String to Lower case.
+    Exports: finalString(String)
+
+### Category 2:
+#### (c): Converting a number which represents a time given in hours to minutes and vice versa, and time given in minutes to seconds and vice versa.
+
+    Submodule: Main
+    Imports: Nothing
+    Description: This Module Prints out what the code is meant to do and then Runs Module ReadInFileMenu.
+    Export: Nothing
+
+    Submodule: ReadInFileMenu
+    Imports: outputFileName(String) is passed through the Main module
+    Description: This Module is used to ask the User if they want to Read in a file or they want to input a value. If yes the system asks the user to input the file name. Then CaseMenu is ran through.
+    Export: Nothing
+
+    Submodule: CaseMenu
+    Imports: inputStatus(String), inputFileName(String), outputFileName(String) is passed in through ReadInFileMenu Module
+    Description: This Module is used to ask the User if they want to change Hours to Minutes, Minutes to Hours, Minutes to Seconds or Seconds to Minutes. Depending on inputStatus(yes or no) from ReadInFileMenu Cases are ran accordingly. If inputStatus is yes ReadFile Module is ran (doesn't matter what is being converted). If inputStatus is no the system asks the user to input a number which is sent to the Module depending on what the user wants to convert from and to. Then finalString is sent to be written to results file through WriteToFile Module.
+    Exports: Nothing
+
+    Submodule: ReadFile
+    Imports: inputFileName(String), choice(String) is passed in through CaseMenu Module
+    Description: This Module is used to read in the file that the user tells the system to read in CaseMenu Module. The Module runs Convert Modules depending on choice, this is done for each line and stores the result as finalString. At the End the of the Module the finalString is Exported.
+    Exports: finalString(String)
+
+    Submodule: WriteToFile
+    Imports: outputFileName(String), finalString(String) is passed in from Upper or Lower Module
+    Description: This Module is used to Write out the results to the results file.
+    Exports: Nothing
+
+    Submodule: ConvertHoursToMinutes
+    Imports: value(String) is passed in through ReadFile or CaseMenu Modules
+    Description: This Module is used to convert Time in Hours to Minutes. The Module changes the String value to Double finalValue by running StringToDouble Module. The finalValue is Multiplied by 60 and then the finalValue is set to two decimal places using TwoDecimalPlaces Module. If the value is invalid hence has a letter in it or has a space in the value the value is returned as 0 with an Invalid Value String. Then the finalString is exported out.
+    Exports: finalString(String)
+
+    Submodule: ConvertMinutesToHours
+    Imports: value(String) is passed in through ReadFile or CaseMenu Modules
+    Description: This Module is used to convert Time in Minutes to Hours. The Module changes the String value to Double finalValue by running StringToDouble Module. The finalValue is Divided by 60 and then the finalValue is set to two decimal places using TwoDecimalPlaces Module. If the value is invalid hence has a letter in it or has a space in the value the value is returned as 0 with an Invalid Value String. Then the finalString is exported out.
+    Exports: finalString(String)
+
+    Submodule: ConvertMinutesToSeconds
+    Imports: value(String) is passed in through ReadFile or CaseMenu Modules
+    Description: This Module is used to convert Time in Minutes to Seconds. The Module changes the String value to Double finalValue by running StringToDouble Module. The finalValue is Multiplied by 60 and then the finalValue is set to two decimal places using TwoDecimalPlaces Module. If the value is invalid hence has a letter in it or has a space in the value the value is returned as 0 with an Invalid Value String. Then the finalString is exported out.
+    Exports: finalString(String)
+
+    Submodule: ConvertSecondsToMinutes
+    Imports: value(String) is passed in through ReadFile or CaseMenu Modules
+    Description: This Module is used to convert Time in Seconds to Minutes. The Module changes the String value to Double finalValue by running StringToDouble Module. The finalValue is Divided by 60 and then the finalValue is set to two decimal places using TwoDecimalPlaces Module. If the value is invalid hence has a letter in it or has a space in the value the value is returned as 0 with an Invalid Value String. Then the finalString is exported out.
+    Exports: finalString(String)
+
+    Submodule: StringToDouble
+    Imports: value(String) is passed in through Convert Modules
+    Description: This Module is used to convert a String to a Double. Then the conversion is exported out.
+    Exports: conversion(Double)
+
+    Submodule: TwoDecimalPlaces
+    Imports: finalValue(Double) is passed in through Convert Modules.
+    Description: This Module is used to convert a multiple decimal places value to two decimal places. Which is given as a stringValue and is exported out.
+    Exports: stringValue(String)
