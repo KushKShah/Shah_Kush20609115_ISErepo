@@ -134,42 +134,42 @@ public class Category1c {
             ASCIIvalue = (int)arrayChar[i];
             if ((ASCIIvalue >= 58) && (ASCIIvalue <= 127))
             {
+                finalValue = "The Value: '" + inputValue + "'";
+                finalValue += "\n";
+                finalValue += "|------------------|";
+                finalValue += "\n";
+                finalValue += "|Not a Valid Number|";
+                finalValue += "\n";
+                finalValue += "|------------------|";
+                finalValue += "\n";
+                finalValue += "\n";
+                System.out.println("The Value: '" + inputValue + "'");
+                System.out.println("|------------------|");
+                System.out.println("|Not a Valid Number|");
+                System.out.println("|------------------|");
+                System.out.println();
                 i = arrayChar.length - 1;
             }
-        }
-        if ((ASCIIvalue >= 58) && (ASCIIvalue <= 127))
-        {
-            finalValue = "The Value: '" + inputValue + "'";
-            finalValue += "\n";
-            finalValue += "|------------------|";
-            finalValue += "\n";
-            finalValue += "|Not a Valid Number|";
-            finalValue += "\n";
-            finalValue += "|------------------|";
-            finalValue += "\n";
-            finalValue += "\n";
-            System.out.println("The Value: '" + inputValue + "'");
-            System.out.println("|------------------|");
-            System.out.println("|Not a Valid Number|");
-            System.out.println("|------------------|");
-            System.out.println();
-        }
-        else if ((ASCIIvalue >= 48) && (ASCIIvalue <= 57))
-        {
-            finalValue = "The Value: '" + inputValue + "'";
-            finalValue += "\n";
-            finalValue += "|------------|";
-            finalValue += "\n";
-            finalValue += "|Valid Number|";
-            finalValue += "\n";
-            finalValue += "|------------|";
-            finalValue += "\n";
-            finalValue += "\n";
-            System.out.println("The Value: '" + inputValue + "'");
-            System.out.println("|------------|");
-            System.out.println("|Valid Number|");
-            System.out.println("|------------|");
-            System.out.println();
+            else if ((ASCIIvalue >= 48) && (ASCIIvalue <= 57))
+            {
+                if (i == arrayChar.length - 1)
+                {
+                    finalValue = "The Value: '" + inputValue + "'";
+                    finalValue += "\n";
+                    finalValue += "|------------|";
+                    finalValue += "\n";
+                    finalValue += "|Valid Number|";
+                    finalValue += "\n";
+                    finalValue += "|------------|";
+                    finalValue += "\n";
+                    finalValue += "\n";
+                    System.out.println("The Value: '" + inputValue + "'");
+                    System.out.println("|------------|");
+                    System.out.println("|Valid Number|");
+                    System.out.println("|------------|");
+                    System.out.println();
+                }
+            }
         }
         return finalValue;
     }
