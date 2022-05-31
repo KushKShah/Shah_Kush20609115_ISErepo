@@ -218,3 +218,18 @@ In this Assignment we need to create softwares which can perform different forms
     (8): The Program will Quit once this is completed.
 ### Discussion on how different modularity concepts are applied in your code
     I applied Modularity by breaking down my software into small methods. I made sure keeping my code as simple as possible which allowed me to re-use the same code again for the other softwares I needed to make. I made sure keeping Low coupling by not having too many interdependencies between methods. I made sure keeping Cohesion high by having each module doing only a single well-defined task. There are no Global Variables there for coupling is low. I have also made sure to have minimal data redundancy.
+### Review Checklist
+|Question|Answer To questions|
+|:-------:|:-------------------:|
+|Are The Methods Broken Down?|YES: I have made sure not to use just one big method instead I have broken it up into smaller methods|
+|Do the Methods only have a single responsibility?|YES: I have made sure not to run more than one thing in each method|
+|Are All Methods Called Correctly?|YES: All the Programs run accordingly|
+|Does the Program Run Without Errors?|YES: The program compiles and runs without any errors|
+|Are all Methods Important?|YES: I have made sure that I have not used methods i don't need|
+|Is the Program getting too complex?|NO: I have kept my code as simple as possible allowing me to reuse the code if needed|
+|Are the variable Names Suitable?|YES: I have tried to keep best possible names that are suitable|
+|Are there any unwanted variables?|NO: I have made sure not to use too many unwanted variables keeping it simple as possible|
+|Are there any Global Variables?|NO: I have Made sure that I have not used any global variables|
+|Is there any data redundancy occuring?|YES: Very Minimal that can't be avoided|
+### Addressed any Issues
+I had a few variables that did not need to be passed in therefore I removed those variables to make my code easier to understand and also makes it easier to flow.
