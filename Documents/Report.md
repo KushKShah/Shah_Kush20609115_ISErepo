@@ -586,8 +586,7 @@ Modified the code so that it can be test if the readfile is outputing correctly 
 ### Run Test Case
     I went through all test cases but did not encounter any problems and there was no output therefore the test was valid for all Testing.
 ### Improvement of Code
-    I did change the code to print out just 1 string rather than multiple strings. This made it easier to test my code and all the if statements. I did not get any new results as I implemented the changes before starting the code for the tests. Test codes can be found in the Folder Test Cases.
-
+    I did change the code to print out just 1 string rather than multiple strings. This made it easier to test my code and all the if statements. I did not get any new results as I implemented the changes before starting the code for the tests. Test codes can be found in the Folder Test Cases. The original Code can be seen in the Section White-Box Testing the changed code can be found in the folder Test Cases.
 |Module Name|BB test Design(EP)|BB test design (BVA)|WB test design|EP test code (implemented/run)|BVA test code (implemented/run)|White-Box testing (implemented/run)|
 |:---------:|:----------------:|:------------------:|:------------:|:----------------------------:|:-----------------------------:|:----------------------------------:|
 |ReadFile|Done|Not Done|Not Done|Done|Not Done|Not Done|
@@ -602,4 +601,391 @@ Modified the code so that it can be test if the readfile is outputing correctly 
 |ConvertSecondsToMinutes|Done|Not Done|Done|Done|Not Done|Done|
 |StringToDouble|Done|Not Done|Done|Done|Not Done|Done|
 |TwoDecimalPlaces|Done|Not Done|Done|Done|Not Done|Done|
+## Version Control Log
+    commit 2668db162f3c407187017e59b4c88ebd906123e1 (HEAD -> main, origin/main)
+    Author: 20609115@student.curtin.edu.au <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 23:32:15 2022 +0800
+
+        Removed the Files and put in folder
+
+    commit 95fafa710cfa45a7bf2e5e040cd1f5ec50af513a
+    Author: 20609115@student.curtin.edu.au <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 23:31:00 2022 +0800
+
+        Reflection and Test Implementation
+
+    commit 484c4097a886967e79a40f86e776c757a60d79b3
+    Author: 20609115@student.curtin.edu.au <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 23:29:41 2022 +0800
+
+        File in Production Folder
+
+    commit 59802683f5b1e46166d1a0f8cd23001cd32ee165
+    Author: 20609115@student.curtin.edu.au <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 23:27:33 2022 +0800
+
+        All TestCases
+
+    commit bd6a3a12e3c2e4372cba64fba11414edfa02daf6
+    Author: 20609115@student.curtin.edu.au <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 23:23:12 2022 +0800
+
+        Category1a Test Case
+
+    commit 0637223610065bea2d560e916d26fc94e0e0632e
+    Author: 20609115@student.curtin.edu.au <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 21:09:43 2022 +0800
+
+        first commit
+
+    commit b780e66c8301bd18c8f90f7b791acdaf8a1dbbdf
+    Author: 20609115@student.curtin.edu.au <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 20:57:59 2022 +0800
+
+        White-Box Testing
+
+    commit 786749087dbc0c33de829ad8943eaae476fb0006
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 19:58:22 2022 +0800
+
+        Black-Box Testing
+
+    commit f69f8a339b8a6023be4f6fb2a4929c9d7f2bd30f
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 18:19:31 2022 +0800
+
+        CheckList and issues
+
+    commit 7fcfc6132bfcd0127d275936826e616140ea0b6d
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 18:09:24 2022 +0800
+
+        Modularity
+
+    commit 1caec69ff8ae9b1b5cccd99a1ca492b0b5cefaf8
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 18:04:06 2022 +0800
+
+        TestCases For all Category
+
+    commit 9c9eb4892b794615e0e2a2e9da86aad34dc13ec1
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 17:49:03 2022 +0800
+
+        Modular Descriptions
+
+    commit 81eed90f34e9a7342a5a23ddbc2d47f5ea454831
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 17:34:18 2022 +0800
+
+        Code For 1a TestCases
+
+    commit abb94bf56e29d08ce9fe6ef6aa95cbca67fe72c5
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 17:26:59 2022 +0800
+
+        Introduction
+
+    commit 59d1b95520d06792159757e26067d24e0a613b4c
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 16:46:25 2022 +0800
+
+        Images for White-Box Testing
+
+    commit 7af8b648e3e1122f16aae8b2ecb710c7f359e208
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 13:18:04 2022 +0800
+
+        Changed Category 1c to reduce if statements
+
+    commit e11eec8e26127c6d14a0c3fc5f20a414e820ec03
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 12:47:43 2022 +0800
+
+        Changed Category 1b to reduce if statements
+
+    commit a517bb255a0eaf60fa27501c98423374be6c6393
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 01:28:34 2022 +0800
+
+        Fixing all variables that are not needed
+
+    commit e5ae9617897ad2d499a1f04f2e57ac4af320508a
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Tue May 31 01:20:53 2022 +0800
+
+        Edit for Category 1a
+
+    commit 69992e46eb3b6cb7e6fc4064610af724048741c3
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 22:15:48 2022 +0800
+
+        Category 1d Upper and Lower Case
+
+    commit bae491d1ece6a99586d7d4d96b5d5ade76dbed36
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 22:15:04 2022 +0800
+
+        Category 1a Upper and Lower Case
+
+    commit 2303c21dce3ff19e6d84e4050c0c775ab254e650
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 22:04:44 2022 +0800
+
+        editted Category1a
+
+    commit bdc16e89702b764d25226747a0ee5df80a593859
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 21:14:23 2022 +0800
+
+        Checklist for Modularity with answers according to code
+
+    commit e2c31a1bd60d9e9cc7628e22050e868e6e7c9a45
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 19:50:16 2022 +0800
+
+        StringToDouble, TwoDecimalplaces
+
+    commit 27562d996d2eff828404dfa5344c850b7c85faf7
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 19:41:53 2022 +0800
+
+        All Converts Similar to ConvertHoursToMinutes
+
+    commit 196f9fe097848bf64dc95afd3ec52d6f8ec1c241
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 19:36:22 2022 +0800
+
+        ConvertHoursToMinutes
+
+    commit 2080590cc57a8f1dc25d42c3b0b22a09f94209da
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 19:28:16 2022 +0800
+
+        ReadFile(if statements for choice), WriteToFile
+
+    commit 3435f7d696369cd5eb85495634180d939bcfb7e1
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 19:18:09 2022 +0800
+
+        CaseMenu
+
+    commit d1083fd7705a39f73c2ffc689140d6e1879c8526
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 19:04:21 2022 +0800
+
+        Main, ReadInFileMenu
+
+    commit 587d3ffd30bab35292e92ae7085d8298bc229e96
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 18:58:14 2022 +0800
+
+        WriteToFile, Upper,Lower Same as Category1a
+
+    commit 13cb2e671b7ba7419a1e41ea41b12b25ae8e8379
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 18:56:20 2022 +0800
+
+        RemoveNum To Remove numbers
+
+    commit 35b8168fa571318006f862aa0573a380f4e11921
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 18:50:44 2022 +0800
+
+        ReadFile Similar
+
+    commit 15e040bce4cc5317d6571ef69260a4ca0cc16b73
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 18:48:27 2022 +0800
+
+        CaseMenu Similar to Category1a
+
+    commit a13f08637826c60e71538b7d853cb32ec5b3e282
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 18:41:20 2022 +0800
+
+        ReadFile
+
+    commit fb329a27bc754f125449e8c706f645fcc5850228
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 18:31:28 2022 +0800
+
+        Main
+
+    commit da59a1932ebc5b7d14d09d51ff8e933b010e5f51
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 18:26:14 2022 +0800
+
+        CheckForValidNumber
+
+    commit 8a79b280b5f17f261dadc98d5b4794803223574a
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 18:22:28 2022 +0800
+
+        WriteToFile(Same)
+
+    commit 46948ba14d488692a1b5b65daec8ac3284618af3
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 18:19:54 2022 +0800
+
+        ReadFile
+
+    commit fa3eba1107fd9fbc74b5f12fb1c90e64510d5530
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 18:15:38 2022 +0800
+
+        Methods Similar to other javas
+
+    commit 1d657d900f34b421d62fa7e40986f0f6359f8591
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 18:09:26 2022 +0800
+
+        Import Files
+
+    commit ccb2e5e16df78fa8ea12b253c64ff4be0c9a9478
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 17:59:16 2022 +0800
+
+        Category1b(CheckForNum
+
+    commit 1a7a40c41494f622d9f5f47ebbcff8f7ab4818bb
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 17:53:27 2022 +0800
+
+        Category1b(NoMenu, ReadFile(Similar), WriteToFile(Similar)
+
+    commit 90eabdb4c5c26d2bac9981d0b2636d5ebfba876e
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 17:49:59 2022 +0800
+
+        Category1b(Top is same)
+
+    commit 378b92035602ee4a0f9d0dbe17dd10702ab4bfb8
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 17:48:50 2022 +0800
+
+        Category1b(Top is same)
+
+    commit 196d2d22367aa24e1a653288b3c5eb0feabb595c
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 17:46:33 2022 +0800
+
+        PrintWriter Change
+
+    commit c7bbdbc4ba97776999cf768115f40fac8524bd4a
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 17:45:58 2022 +0800
+
+        Input Files
+
+    commit 676c4d2d2cff233a1ae4bf7a3bfd6bd31912dec9
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 17:36:58 2022 +0800
+
+        Fix While Error
+
+    commit d45b5ece25a51f35bd48c8233547c0fd08cd99cb
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 17:19:05 2022 +0800
+
+        Category1a(WriteToFile) Commit
+
+    commit 0f95777d0d5500106bf8d100dc169d9db1337035
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 17:14:55 2022 +0800
+
+        Category1a(WriteToFile) Commit
+
+    commit a9f9bae12889db026ba6efa09fce06a4ba782f5f
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 17:10:13 2022 +0800
+
+        Category1a(ReadFile) Commit
+
+    commit 74b24ba01787afcd0de9adc0720be0c3e8c2430f
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 17:07:15 2022 +0800
+
+        all Result Files
+
+    commit 3cb18ff6135af45a17a0f81b841b0b83b9fdd220
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 17:05:54 2022 +0800
+
+        Category1a(CaseMenu) Commit
+
+    commit e7fa902a79ac5388fdbbb7234475a8d20b66a868
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 17:01:48 2022 +0800
+
+        Category1a(CaseMenu) Commit
+
+    commit 73b084133cc0d98201e5733f2513a4689d770c2d
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 16:46:20 2022 +0800
+
+        Category1a(ReadInFileMenu) Commit
+
+    commit 773ed06d1af5f6eaeed5d89888e6e51e4dd55878
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 16:41:56 2022 +0800
+
+        Category1a(main) Commit
+
+    commit 2f8da65ed647af9726790697ac4e049c520f4dc3
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 16:36:55 2022 +0800
+
+        Category2(c) Commit
+
+    commit 0d91eb0f6fc615c7be571f117f7ecb6fafffccb9
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Mon May 30 16:27:17 2022 +0800
+
+        Category1(d) Commit
+
+    commit e0a09bb36f660fb7cc9043d3df80edfc329a881e
+    Author: Kush Kalpeshkumar Shah <20609115@vdi-1804-cs-072.staff.ad.curtin.edu.au>
+    Date:   Mon May 30 00:20:09 2022 +0800
+
+        Category1(c) Commit
+
+    commit 2d0d9c2e31a4b546349435e53a281e73e60bcb7d
+    Author: Kush Kalpeshkumar Shah <20609115@vdi-1804-cs-072.staff.ad.curtin.edu.au>
+    Date:   Mon May 30 00:06:25 2022 +0800
+
+        Category1(b) Commit
+
+    commit 89579023493d1feabf1c77ed1735dfe7242acdc2
+    Author: Kush Kalpeshkumar Shah <20609115@vdi-1804-cs-072.staff.ad.curtin.edu.au>
+    Date:   Mon May 30 00:04:37 2022 +0800
+
+        Category1(a) Commit
+
+    commit 13d65307120087fe0f7d1c3a97f187b4a92fc24a
+    Author: Kush Kalpeshkumar Shah <20609115@vdi-1804-cs-072.staff.ad.curtin.edu.au>
+    Date:   Sun May 29 23:13:02 2022 +0800
+
+        First Commit
+
+    commit 1b50ffbd0a43a21c2b59d6a3c3126acc6b91ab2e
+    Author: Kush Kalpeshkumar Shah <20609115@vdi-1804-cs-072.staff.ad.curtin.edu.au>
+    Date:   Sun May 29 22:58:19 2022 +0800
+
+        Initial Commit
+
+    commit a249057b175929bcf04354e17dbddb366d89b7db
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Tue May 24 14:59:25 2022 +0800
+
+        Initial commit
+
+    commit d09882b7fade5a69f1c1483b23dc614a8e0ba71d
+    Author: Kush <20609115@student.curtin.edu.au>
+    Date:   Tue May 24 14:54:14 2022 +0800
+
+        first commit
 ## Ethics
+    When it comes to coding, ethics and professionalism are crucial. This is because, because my code is publicly available on github, anyone can readily look at it, download it, and use it. Because much of my code is dependent on other parts of the code, if someone were to use pieces of my code without knowing it, they may input the wrong details and hence not obtain the proper outcomes. As a result, it is critical that you adhere to Ethics and Professionalism.
+## Discussion
+    I tried following the Modularity Guidelines which took me longer, but following the guidelines allowed me to keep my code short and simple and not over complicating it. In the future i would like to start my assignment earlier and follow the lectures step by step as they made the assignment alot more easier to do.
